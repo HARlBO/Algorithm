@@ -1,11 +1,11 @@
-package Programmers;
+package programmers;
 /**
  * 
  * 숫자의 표현 
- * https://programmers.co.kr/learn/challenge_codes/156
+ * https://programmers.co.kr/learn/challenge_codes/40
  * 
  */
-public class Challenge40 {
+public class Challenge_40 {
 	public int expressions(int num) {
 		int answer = 0;
 		
@@ -30,7 +30,7 @@ public class Challenge40 {
 	}
 
 	public static void main(String args[]) {
-		Challenge40 expressions = new Challenge40();
+		Challenge_40 expressions = new Challenge_40();
 		System.out.println("답 : "+expressions.expressions(15));
 	}
 }
