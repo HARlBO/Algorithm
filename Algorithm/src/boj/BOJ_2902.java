@@ -10,8 +10,6 @@ import java.io.InputStreamReader;
  * https://www.acmicpc.net/problem/2902
  * 
  * 
- * Knuth-Morris-Pratt
- * 
  */
 public class BOJ_2902 {
 
