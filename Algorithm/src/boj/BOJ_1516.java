@@ -11,8 +11,7 @@ import java.util.StringTokenizer;
 
 /**
  * 
- * 게임 개발 (위상정렬) 
- * https://www.acmicpc.net/problem/1516
+ * 게임 개발 (위상정렬) https://www.acmicpc.net/problem/1516
  * 
  */
 public class BOJ_1516 {
@@ -38,22 +37,19 @@ public class BOJ_1516 {
 		for (int i = 0; i < N; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 			time[i] = Integer.parseInt(st.nextToken());
-
 			boolean fin = true;
 
 			while (fin) {
 				int next = Integer.parseInt(st.nextToken());
-				
+
 				if (next != -1) {
 					degree[i]++;
-					list[next-1].add(i);
+					list[next - 1].add(i);
 				} else {
 					fin = false;
 				}
 			}
-		}
 
-		for (int i = 0; i < N; i++) {
 			// 차수가 0 (들어오는 간선이 없는) 인 정점 큐에 넣고
 			// 건물을 짓는 시간 = 건물을 완성하는 시간
 			if (degree[i] == 0) {
@@ -63,7 +59,7 @@ public class BOJ_1516 {
 		}
 
 		// 위상 정렬
-		for (int i = 0; i < N; i++) {			
+		for (int i = 0; i < N; i++) {
 			int current = queue.poll();
 
 			for (int next : list[current]) {
@@ -80,7 +76,7 @@ public class BOJ_1516 {
 		for (int i = 0; i < N; i++) {
 			sb.append(result[i]).append("\n");
 		}
-		
+
 		System.out.println(sb.toString());
 	}
 }
